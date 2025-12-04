@@ -362,12 +362,13 @@ h2:hover {
     color: #6a0572;
 }
 
-/* --- CARROSSEL (ÁREA CORRIGIDA) --- */
+/* --- CARROSSEL REVISADO --- */
 .carousel-bootstrap {
     position: relative;
-    height: 550px; 
+    /* Aumentei a altura para desktop para as imagens terem espaço para crescer */
+    height: 600px; 
     width: 100%;
-    max-width: 900px; 
+    max-width: 1000px; /* Largura máxima maior para desktop */
     margin: 0 auto 40px auto; 
 }
 
@@ -410,36 +411,42 @@ h2:hover {
     z-index: 1;
 }
 
-/* Container das duas fotos (Antes e Depois) */
+/* ESTRUTURA DESKTOP (PADRÃO) 
+   Aqui corrigimos o problema das imagens pequenas no PC.
+*/
 .par-fotos-wrapper {
     display: flex;
     justify-content: center;
     gap: 15px;
     width: 95%;
-    height: 80%; 
+    /* Aumentei para 85% para a imagem dominar o slide */
+    height: 85%; 
+    padding-top: 10px;
 }
 
 .foto-card {
     position: relative;
     flex: unset; 
-    height: 45%;
+    /* A imagem vai ocupar toda a altura disponível do wrapper */
+    height: 100%; 
+    width: 48%;   
     border-radius: 10px;
     background-color: #f0f0f0;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    /* margin-top removido daqui para não quebrar o layout desktop */
 }
 
 .foto-card img {
     width: 100%;
     height: 100%;
+    /* Mantém 'contain' para mostrar o cabelo todo, mas como aumentamos
+       o container pai, a imagem vai crescer junto */
     object-fit: contain; 
     border: 1px solid #ddd;
 }
 
-/* Etiquetas "Antes/Depois" */
 .etiqueta {
     position: absolute;
-    top: -35px;
+    top: -15px; 
     left: 50%;
     transform: translateX(-50%);
     background-color: rgba(106, 5, 114, 1); 
@@ -454,18 +461,19 @@ h2:hover {
 }
 
 .legenda-slide {
-    margin-top: 20px;
+    margin-top: 10px;
     font-weight: bold;
     color: #6a0572;
     font-size: 1.3rem;
     text-transform: uppercase;
     letter-spacing: 1px;
+    padding: 0 10px;
 }
 
 /* Botões (Setas) */
 .carousel-button {
     position: absolute;
-    top: 45%;
+    top: 50%;
     transform: translateY(-50%);
     background: rgba(0, 0, 0, 0.3);
     color: white;
@@ -482,35 +490,18 @@ h2:hover {
     background: rgba(106, 5, 114, 0.8); 
 }
 
-.carousel-button--left { left: -30px; }
-.carousel-button--right { right: -30px; }
+.carousel-button--left { left: 10px; }
+.carousel-button--right { right: 10px; }
 
-/* Ajuste para mobile e Correção de Alinhamento */
-@media (max-width: 768px) {
-    .carousel-button--left { left: 10px; }
-    .carousel-button--right { right: 10px; }
-    .carousel-bootstrap { height: 900px; }
-    
-    .par-fotos-wrapper {
-        flex-direction: column; 
-        height: 92%;
-        gap: 40px;
-        padding-top: 20px;
-    }
-
-    /* A margem só deve ser aplicada quando os cards estão empilhados (mobile) */
-    .foto-card:first-child {
-        margin-top: 10px; 
-    }
-}
-
-/* Indicadores (Bolinhas) */
+/* INDICADORES (BOLINHAS)
+   Posicionados absolutamente no rodapé do slide
+*/
 .carousel-nav {
     display: flex;
     justify-content: center;
     padding: 5px 0;
     position: absolute;
-    bottom: 10px;
+    bottom: 10px; 
     width: 100%;
     z-index: 10;
 }
@@ -528,6 +519,52 @@ h2:hover {
 .carousel-indicator.current-slide {
     background: #6a0572; 
 }
+
+
+/* MEDIA QUERY: CELULAR (MOBILE)
+   Correções específicas para sobreposição de texto
+*/
+@media (max-width: 768px) {
+    .carousel-bootstrap { 
+        /* Aumentei a altura total no celular para dar folga */
+        height: 850px; 
+    }
+    
+    .carousel-slide {
+        /* Adicionei padding no fundo para reservar espaço para as bolinhas */
+        padding-bottom: 40px;
+        justify-content: flex-start; /* Alinha tudo ao topo */
+    }
+
+    .par-fotos-wrapper {
+        flex-direction: column; 
+        height: 75%; /* Reduzi a altura das fotos para sobrar mais espaço pro texto */
+        gap: 25px;
+        padding-top: 30px;
+        width: 90%;
+    }
+
+    .foto-card {
+        width: 100%;   
+        height: 48%;   
+    }
+
+    .foto-card:first-child {
+        margin-top: 0; 
+    }
+
+    /* Empurrar o texto para cima para fugir das bolinhas */
+    .legenda-slide {
+        margin-top: auto; /* Empurra o texto para o final do espaço disponível */
+        margin-bottom: 20px; /* Margem de segurança acima das bolinhas */
+        font-size: 1.1rem;   
+    }
+
+    .carousel-nav {
+        bottom: 5px; /* Bolinhas bem no rodapé */
+    }
+}
+
 
 /* --- ESTILIZAÇÃO DO RODAPÉ --- */
 #rodape {
@@ -604,7 +641,6 @@ h2:hover {
     margin-bottom: 40px;
 }
 
-/* Camada escura sobre a imagem */
 .overlay {
     position: absolute;
     top: 0;
@@ -635,7 +671,6 @@ h2:hover {
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
-/* Ajuste do espaçamento */
 .home-complemento {
     padding: 0 20px;
 }
@@ -651,7 +686,6 @@ h2:hover {
     margin: 0 auto; 
 }
 
-/* Ajuste de segurança */
 body, html {
     overflow-x: hidden; 
 }
