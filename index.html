@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graça Cabeleireira</title>
+    <!-- Vinculando o CSS que o senhor já possui -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Fontes e Ícones -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    
+    <header id="header">
+        <div class="logo-container">
+            <!-- Certifique-se de que a imagem logo.png existe na pasta -->
+            <img src="logo.png" alt="Logo Graça Cabeleireira" class="logo">
+            <h1>Graça Cabeleireira</h1>
+        </div>
+        <button id="menu-toggle" aria-label="Abrir Menu">☰</button>
+
+        <!-- Navegação com links para as abas -->
+        <nav id="nav-menu">
+            <a href="#home" class="nav-link">Início</a>
+            <a href="#servicos" class="nav-link">Serviços</a>    
+            <a href="#sobre" class="nav-link">Sobre</a>
+            <a href="#avaliacoes" class="nav-link">Avaliações</a>
+            <a href="#localizacao" class="nav-link">Localização</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- SEÇÃO HOME -->
+        <section id="home" class="aba active">
+            <div class="hero-banner">
+                <div class="overlay"></div>
+                <div class="hero-content banner-content">
+                    <h2>Realce Sua Beleza Natural</h2>
+                    <p class="hero-sub">Cuidado exclusivo, técnica apurada e o atendimento carinhoso que você merece.</p>
+                    <a href="https://wa.me/5511976081922?text=Olá, tudo bem? Vim através do site e gostaria de agendar um horário." target="_blank" class="cta-whatsapp pulsante banner-cta">
+                        Agende Seu Horário! 📞
+                    </a>
+                </div>
+            </div>
+
+            <div class="home-complemento">
+                <div class="diferenciais-container">
+                    <div class="diferencial-item">
+                        <span class="icone">✨</span>
+                        <h3>Experiência</h3>
+                        <p>Mais de 10 anos cuidando de você.</p>
+                    </div>
+                    <div class="diferencial-item">
+                        <span class="icone">🧴</span>
+                        <h3>Produtos Premium</h3>
+                        <p>Apenas as melhores marcas do mercado.</p>
+                    </div>
+                    <div class="diferencial-item">
+                        <span class="icone">🏠</span>
+                        <h3>Conforto</h3>
+                        <p>Atendimento personalizado e sem pressa.</p>
+                    </div>
+                </div>
+
+                <div class="horarios-box">
+                    <h3>🕒 Horário de Atendimento</h3>
+                    <p>Terça a Sábado: 09:00 às 19:00</p>
+                    <p class="aviso-pequeno">*Atendimento com hora marcada*</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO SERVIÇOS -->
+        <section id="servicos" class="aba">
+            <h2>Nossos Serviços de Elite</h2>
+            
+            <div class="servico-item">
+                <h3>Hidratação</h3>
+                <p>Nutrição profunda para restaurar o brilho e a maciez dos fios.</p>
+            </div>
+
+            <div class="servico-item">
+                <h3>Progressiva</h3>
+                <p>Alisamento duradouro com zero frizz e efeito liso espelhado.</p>
+            </div>
+            
+            <div class="servico-item">
+                <h3>Realinhamento</h3>
+                <p>Redução de volume e disciplina para cabelos rebeldes.</p>
+            </div>
+
+            <div class="servico-item">
+                <h3>Botox</h3>
+                <p>Tratamento intensivo que preenche e rejuvenesce a fibra capilar.</p>
+            </div>
+            
+            <div class="servico-item">
+                <h3>Selagem</h3>
+                <p>Fechamento das cutículas para proteção e cor vibrante.</p>
+            </div>
+
+            <a href="https://wa.me/5511976081922?text=Olá, tudo bem? Vim através do site e gostaria de agendar um horário para fazer..." target="_blank" class="cta-whatsapp">
+                Agende Seu Tratamento Agora!
+            </a>
+        </section>
+
+        <!-- SEÇÃO SOBRE (COM CARROSSEL) -->
+        <section id="sobre" class="aba">
+            <h2>Nossa História e Excelência</h2>
+
+            <div class="bio-cabeleireira">
+                <p>Aqui, a beleza é tratada com carinho e técnica. <strong> Sou a Graça, e com mais de 10 anos de experiência,</strong> transformei minha paixão em profissão. Meu trabalho une conhecimento técnico aprofundado e as melhores tendências do mercado.<br><br>Sou certificada com <strong>cursos profissionalizantes,</strong> garantindo que tratamentos como progressivas, clareamentos de mechas e botox capilar, sejam realizados com a máxima precisão e segurança. Confie seus fios a mãos experientes e apaixonadas pelo que fazem.</p>
+            </div>
+            
+            <h3>Resultados que Transformam</h3>
+            <br>
+
+            <!-- ESTRUTURA DO CARROSSEL -->
+            <div class="carousel-bootstrap">
+                <div class="carousel-track-container">
+                    <ul class="carousel-track">
+                        
+                        <!-- Slide 1 -->
+                        <li class="carousel-slide current-slide">
+                            <div class="par-fotos-wrapper">
+                                <div class="foto-card">
+                                    <span class="etiqueta">Antes</span>
+                                    <!-- Substitua pelos seus arquivos reais -->
+                                    <img src="cabelo 1a.jpeg" alt="Cabelo Antes 1">
+                                </div>
+                                <div class="foto-card">
+                                    <span class="etiqueta">Depois</span>
+                                    <img src="cabelo 1d.jpeg" alt="Cabelo Depois 1">
+                                </div>
+                            </div>
+                            <p class="legenda-slide">Realinhamento Capilar Incrível</p>
+                        </li>
+
+                        <!-- Slide 2 -->
+                        <li class="carousel-slide">
+                            <div class="par-fotos-wrapper">
+                                <div class="foto-card">
+                                    <span class="etiqueta">Antes</span>
+                                    <img src="cabelo2a.jpeg" alt="Antes 2">
+                                </div>
+                                <div class="foto-card">
+                                    <span class="etiqueta">Depois</span>
+                                    <img src="cabelo2d.jpeg" alt="Depois 2">
+                                </div>
+                            </div>
+                            <p class="legenda-slide">Botox Restaurador</p>
+                        </li>
+
+                        <!-- Slide 3 -->
+                        <li class="carousel-slide">
+                            <div class="par-fotos-wrapper">
+                                <div class="foto-card">
+                                    <span class="etiqueta">Antes</span>
+                                    <img src="cabelo 3a.jpeg" alt="Antes 3">
+                                </div>
+                                <div class="foto-card">
+                                    <span class="etiqueta">Depois</span>
+                                    <img src="cabelo 3d.jpeg" alt="Depois 3">
+                                </div>
+                            </div>
+                            <p class="legenda-slide">Progressiva e Luzes Tradicionais</p>
+                        </li>
+
+                        <!-- Slide 4 -->
+                        <li class="carousel-slide">
+                            <div class="par-fotos-wrapper">
+                                <div class="foto-card">
+                                    <span class="etiqueta">Antes</span>
+                                    <img src="cabelo 4a.jpeg" alt="Antes 4">
+                                </div>
+                                <div class="foto-card">
+                                    <span class="etiqueta">Depois</span>
+                                    <img src="cabelo 4d.jpeg" alt="Depois 4">
+                                </div>
+                            </div>
+                            <p class="legenda-slide">Morena Iluminado</p>
+                        </li>
+
+                        <!-- Slide 5 -->
+                        <li class="carousel-slide">
+                            <div class="par-fotos-wrapper">
+                                <div class="foto-card">
+                                    <span class="etiqueta">Antes</span>
+                                    <img src="cabelo 5a.jpeg" alt="Antes 5">
+                                </div>
+                                <div class="foto-card">
+                                    <span class="etiqueta">Depois</span>
+                                    <img src="cabelo 5d.jpeg" alt="Depois 5">
+                                </div>
+                            </div>
+                            <p class="legenda-slide">Luzes Tradicionais</p>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <!-- Botões de Navegação -->
+                <button class="carousel-button carousel-button--left">❮</button>
+                <button class="carousel-button carousel-button--right">❯</button>
+
+                <!-- Indicadores (Bolinhas) -->
+                <div class="carousel-nav">
+                    <button class="carousel-indicator current-slide"></button>
+                    <button class="carousel-indicator"></button>
+                    <button class="carousel-indicator"></button>
+                    <button class="carousel-indicator"></button>
+                    <button class="carousel-indicator"></button>
+                </div>
+            </div>
+        </section> 
+        
+        <!-- SEÇÃO AVALIAÇÕES -->
+        <section id="avaliacoes" class="aba">
+            <h2>O Que Nossos Clientes Dizem</h2>
+
+            <p style="margin-bottom: 20px; color: #666;">A satisfação de quem confia em nosso trabalho.</p>
+
+            <div class="testimonials-container">
+                <div class="testimonial-bubble">
+                    <p>"A progressiva ficou perfeita! O salão Graça Cabeleireira é o melhor da região."</p>
+                    <span class="client-name">- Ana S.</span>
+                </div>
+
+                <div class="testimonial-bubble">
+                    <p>"Atendimento incrível e o meu botox capilar fez milagres no meu cabelo."</p>
+                    <span class="client-name">- Renata F.</span>
+                </div>
+                
+                <div class="testimonial-bubble">
+                    <p>"Profissional super atenciosa e o realinhamento que fiz durou muito mais do que eu esperava!"</p>
+                    <span class="client-name">- Camila S.</span>
+                </div>
+
+                <div class="testimonial-bubble">
+                    <p>"Ambiente super acolhedor e a Graça é uma querida. Recomendo de olhos fechados!"</p>
+                    <span class="client-name">- Juliana M.</span>
+                </div>
+            </div>
+            
+            <a href="https://wa.me/5511976081922?text=Olá! Vi as avaliações no site e quero agendar meu horário." target="_blank" class="cta-whatsapp">
+                Quero esse resultado! 💖
+            </a>
+        </section>
+
+        <!-- SEÇÃO LOCALIZAÇÃO -->
+        <section id="localizacao" class="aba">
+            <h2>Onde Nos Encontrar</h2>
+            <p>📍 R. Onze, 107 - Jardim Normandia, Guarulhos - SP, 07252-420.</p>
+            <br>
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3660.365322331562!2d-46.41137192943661!3d-23.447283410705854!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce6266dd2288ad%3A0xa3d9ef0cf9bd29cd!2sR.%20Onze%2C%20107%20-%20Jardim%20Normandia%2C%20Guarulhos%20-%20SP%2C%2007252-350!5e0!3m2!1spt-BR!2sbr!4v1764694913819!5m2!1spt-BR!2sbr" 
+                width="450" 
+                height="450" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </section>
+    </main>
+
+    <footer id="rodape">
+        <div class="footer-content">
+            <div class="social-links">
+                <a href="https://www.instagram.com/mariamorenaaguiar/#" target="_blank" class="btn-instagram">
+                    <i class="fab fa-instagram"></i> Siga-nos no Instagram
+                </a>
+            </div>
+            <br>
+            <p>© 2025 Graça Cabeleireira. Todos os direitos reservados.</p>
+        </div> 
+    </footer>
+
+    <!-- Arquivo JavaScript essencial para o Carrossel e Abas funcionarem -->
+    <script src="script.js"></script>
+</body>
+</html>
