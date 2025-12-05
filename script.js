@@ -25,7 +25,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- LÓGICA DO CARROSSEL BOOTSTRAP ---
     const track = document.querySelector('.carousel-track');
-    // Se o carrossel não existir na página (ex: erro de html), para o script aqui
     if (!track) return; 
 
     const slides = Array.from(track.children);
